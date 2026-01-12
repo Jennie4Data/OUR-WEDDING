@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE WEDDING | RSVP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F9F7F2; color: #2D2D2D; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; }
+        .card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="serif font-bold text-xl tracking-widest">J & M</span>
+            <div class="space-x-8 text-xs uppercase tracking-widest font-semibold">
+                <a href="#story" class="hover:text-amber-600">Story</a>
+                <a href="#gallery" class="hover:text-amber-600">Gallery</a>
+                <a href="#registry" class="hover:text-amber-600">Registry</a>
+                <a href="#rsvp" class="bg-black text-white px-5 py-2 rounded-full">RSVP</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="h-screen hero-gradient flex items-center justify-center text-center text-white">
+        <div>
+            <p class="uppercase tracking-[0.3em] mb-4 text-sm">Finally / 2026</p>
+            <h1 class="text-7xl md:text-9xl mb-6">Julian & Maria</h1>
+            <p class="serif italic text-2xl">We’re getting married</p>
+        </div>
+    </header>
+
+    <section id="story" class="max-w-4xl mx-auto py-24 px-6 text-center">
+        <h2 class="text-4xl mb-8">Our Story</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-left space-y-4 leading-relaxed text-gray-600">
+                <p>It started in a small coffee shop in the heart of the city. What was meant to be a quick 30-minute meeting turned into a five-hour conversation about art, travel, and the future.</p>
+                <p>Three years, four countries, and one puppy later, we're ready to make it official. We can't wait to celebrate this new chapter with our favorite people.</p>
+            </div>
+            <div class="bg-gray-200 h-80 rounded-lg overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Story Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-white py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl mb-12 text-center">Pre-Wedding Shoot</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover rounded shadow-md hover:opacity-90 transition cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1522673607200-1648832cee77?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover rounded shadow-md hover:opacity-90 transition cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover rounded shadow-md hover:opacity-90 transition cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover rounded shadow-md hover:opacity-90 transition cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <section id="registry" class="max-w-6xl mx-auto py-24 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl mb-4">Wedding Registry</h2>
+            <p class="text-gray-500">Your presence is enough, but if you'd like to gift us, we've curated a list of things we need for our new home.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <script>
+                const items = [
+                    { name: 'Smart TV', icon: '📺' }, { name: 'AC Unit', icon: '❄️' },
+                    { name: 'Refrigerator', icon: '🧊' }, { name: 'Washing Machine', icon: '🧺' },
+                    { name: '12-pc Stainless Cookware', icon: '🍳' }, { name: 'Air Fryer', icon: '🍟' },
+                    { name: 'Microwave', icon: '⏲️' }, { name: 'Blender', icon: '🥤' },
+                    { name: 'Electric Kettle', icon: '🫖' }, { name: '16-pc Stoneware Set', icon: '🍽️' }
+                ];
+                
+                document.write(items.map(item => `
+                    <div class="card bg-white p-8 border border-gray-100 text-center shadow-sm rounded-xl">
+                        <div class="text-3xl mb-4">${item.icon}</div>
+                        <h3 class="font-semibold text-gray-800 mb-4">${item.name}</h3>
+                        <button class="text-xs uppercase tracking-widest font-bold border-b-2 border-amber-200 hover:border-amber-500 pb-1 transition">Contribute</button>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </section>
+
+    <section id="rsvp" class="bg-stone-900 text-white py-24 px-6">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-4xl mb-8 serif">Kindly Respond</h2>
+            <form id="rsvpForm" class="space-y-6">
+                <input type="text" name="name" placeholder="YOUR FULL NAME" class="w-full bg-transparent border-b border-gray-600 py-3 focus:border-white outline-none transition" required>
+                <input type="email" name="email" placeholder="EMAIL ADDRESS" class="w-full bg-transparent border-b border-gray-600 py-3 focus:border-white outline-none transition" required>
+                <div class="flex gap-4">
+                    <select name="attendance" class="w-full bg-transparent border-b border-gray-600 py-3 focus:border-white outline-none transition">
+                        <option class="text-black" value="Yes">WILL ATTEND</option>
+                        <option class="text-black" value="No">WILL NOT ATTEND</option>
+                    </select>
+                    <input type="number" name="guests" placeholder="GUESTS" class="w-1/4 bg-transparent border-b border-gray-600 py-3 focus:border-white outline-none transition" min="1" max="5">
+                </div>
+                <button type="submit" class="w-full bg-white text-black font-bold py-4 rounded-full uppercase tracking-widest text-sm hover:bg-amber-100 transition mt-8">Submit RSVP</button>
+            </form>
+            <p id="successMsg" class="mt-6 text-amber-200 hidden italic">Response received. We can't wait to see you!</p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 text-xs uppercase tracking-[0.2em]">
+        Julian & Maria — 2026 — Built for Love
+    </footer>
+
+    <script>
+        const scriptURL = 'REPLACE_WITH_YOUR_DEPLOYED_URL';
+        const form = document.getElementById('rsvpForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(() => {
+                document.getElementById('successMsg').classList.remove('hidden');
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>
